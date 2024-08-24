@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Prediction</title>
+    <style>body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    .container {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+        width: 100%;
+    }
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+    p {
+        font-size: 18px;
+        text-align: center;
+        color: #555;
+    }
+    .back-link {
+        display: block;
+        margin-top: 20px;
+        text-align: center;
+        color: #007BFF;
+        text-decoration: none;
+        font-size: 16px;
+    }
+    .back-link:hover {
+        text-decoration: underline;
+    }</style>
+</head>
+<body>
+    <h1>Predict Student's Final Grade</h1>
+    <form action="/predict" method="POST">
+        <label for="hours">Enter the number of hours studied:</label><br>
+        <input type="text" id="hours" name="hours" required><br><br>
+        <input type="submit" value="Predict">
+    </form>
+    <br>
+    {% if prediction_text %}
+        <h2>{{ prediction_text }}</h2>
+    {% endif %}
+</body>
+</html>
