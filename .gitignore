@@ -1,1 +1,23 @@
+# Python
+*.pyc
+__pycache__/
+
+# Environment
+env/
 venv/
+*.env
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+*.log
+
+# Models
+*.pkl
